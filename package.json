@@ -23,7 +23,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-sass": "^4.1.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "normalize.css": "^8.0.1"
   },
   "dependencies": {
     "gulp-rename": "^2.0.0"

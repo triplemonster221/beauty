@@ -10,7 +10,7 @@ let gulp = require('gulp'),
 
 
 gulp.task('sass', function () {
-  return gulp.src('app/scss/style.scss')
+  return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename({
     suffix: ".min"
@@ -27,7 +27,7 @@ gulp.task('sass', function () {
 
 gulp.task('style', function() {
   return gulp.src([
-
+       'node_modules/normalize.css/normalize.css',
   	])
     .pipe(concat('libs.min.css'))
     .pipe(cssmin())
@@ -35,14 +35,14 @@ gulp.task('style', function() {
 });
 
 
-    gulp.task('script', function(){
-    return gulp.src([
+//     gulp.task('script', function(){
+//     return gulp.src([
 
-    ])
-    .pipe(concat('libs.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('app/js'))
-});
+//     ])
+//     .pipe(concat('libs.min.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest('app/js'))
+// });
 
 
 gulp.task('browser-sync', function() {
@@ -54,7 +54,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task ('html', function(){
-    return gulp.src('app/index.html')
+    return gulp.src('app/*.html')
      .pipe(browserSync.reload({
         stream:true
     }));
@@ -62,7 +62,7 @@ gulp.task ('html', function(){
 
 
      gulp.task ('js', function(){
-        return gulp.src('app/js/main.js')
+        return gulp.src('app/js/*.js')
         .pipe(browserSync.reload({
             stream:true
         }));
@@ -70,9 +70,9 @@ gulp.task ('html', function(){
 
 
 gulp.task('watch', function(){
-    gulp.watch('app/sass/style.scss', gulp.parallel('sass'))
-    gulp.watch('app/index.html', gulp.parallel('html'))
+    gulp.watch('app/**/*.scss', gulp.parallel('sass'))
+    gulp.watch('app/*.html', gulp.parallel('html'))
     gulp.watch('app/js/*.js', gulp.parallel('js'))
 });
 
-gulp.task('default',gulp.parallel('sryle','script','sass','watch','browser-sync'))
+gulp.task('default',gulp.parallel('style','sass','watch','browser-sync'))
