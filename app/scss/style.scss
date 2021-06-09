@@ -18,7 +18,11 @@
 		margin-left: 30px;
 	}
 	&-link {
-
+		border-bottom: 1px solid transparent;
+		transition: all .3s ease;
+	}
+	&-link:hover {
+		border-bottom: 1px solid #000;
 	}
 }
 
@@ -27,6 +31,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 50px;
 }
 
 .header__info {
@@ -46,5 +51,26 @@
 		line-height: 16px;
 		padding-top: 10px;
 		margin-left: 40px;
+	}
+}
+
+.header__bottom {
+}
+
+
+.menu {
+	&__item {
+		display: flex;
+		justify-content: center;
+	}
+	&__list + .menu__list{
+		margin-left: 40px;
+	}
+	&__link {
+		border-bottom: 1px solid transparent;
+		transition: all .3s ease;
+	}
+	&__link:hover {
+		border-bottom: 1px solid #000;
 	}
 }
