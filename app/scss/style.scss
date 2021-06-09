@@ -277,3 +277,13 @@
 	text-align: center;
 	padding-top: 8px;			
 }
+
+.footer {
+	padding: 25px 0;
+	background: $bg_grey;
+}
+
+.footer__inner {
+	display: flex;	
+	justify-content: space-between;
+}
