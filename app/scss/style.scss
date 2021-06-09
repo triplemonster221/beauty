@@ -234,3 +234,46 @@
 		box-shadow: 0 0 12px 2px #fff;
 	}
 }
+
+.contacts {
+	padding: 37px 0 38px;
+}
+
+.contacts__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.contacts__social a +  a {
+	margin-left: 20px;
+}
+
+.contacts__adres {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.contacts__tel {
+	display: flex;	
+	align-items: center;
+	& a + a {
+		margin-left: 40px;
+	}
+}
+
+.tel {
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.tel__down {
+	display: block;	
+	border: 2px solid #66C05D;
+	box-sizing: border-box;
+	border-radius: 40px;
+	width: 170px;
+	height: 40px;
+	text-align: center;
+	padding-top: 8px;			
+}
