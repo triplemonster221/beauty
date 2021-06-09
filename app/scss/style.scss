@@ -55,8 +55,8 @@
 }
 
 .header__bottom {
+	padding-bottom: 30px;
 }
-
 
 .menu {
 	&__item {
@@ -72,5 +72,165 @@
 	}
 	&__link:hover {
 		border-bottom: 1px solid #000;
+	}
+}
+
+// about
+
+.about {
+	padding-top: 192px;
+	background-position:center top;
+	background-size:cover;
+	background-repeat: no-repeat;
+	height: 604px;
+	color: #fff;
+	&__title {
+		font-weight: bold;
+		font-size: 48px;
+		line-height: 56px;
+	}
+	&__info {
+		width: 308px;
+		font-size: 14px;
+		line-height: 20px;
+		margin-bottom: 50px;
+	}
+	&__btn {
+		display: block;
+		width: 170px;
+		height: 40px;
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		letter-spacing: 0.05em;
+		border: 2px solid #FFFFFF;
+		box-sizing: border-box;
+		border-radius: 40px;
+		padding-top: 12px;
+		transition: all .3s ease;
+		&:hover {
+			box-shadow: 0 0 12px 2px #fff;
+		}
+	}
+}
+
+// special
+
+.special {
+	background: $bg_grey;
+	padding-top: 80px;
+	padding-bottom: 132px;
+}
+
+.special__title {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: 38px;
+}
+
+.special__item {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+
+.special__box {
+	background: #fff;
+	width: 255px;
+	padding: 25px 30px;
+	text-align: center;
+	&-img {
+		margin-bottom: 20px;
+	}
+	&-info {
+		color: #333333;
+		margin-bottom: 20px;
+	}
+	&-price {
+		font-weight: 500;
+		font-size: 21px;
+		line-height: 25px;
+		letter-spacing: 0.05em;
+		margin-bottom: 20px;
+	}
+	&-btn {
+		display: block;
+		width: 130px;
+		height: 35px;
+		text-align: center;
+		background: $bg_green;
+		border-radius: 30px;
+		letter-spacing: 0.05em;
+		margin: 0 auto;
+		padding-top: 9px;
+		color: #fff;
+		transition: all .3s ease;
+		&:hover {
+			box-shadow: 0 0 12px 2px $bg_green;
+		}
+	}
+}
+
+.bonus {
+	display: flex;
+	justify-content: space-between;
+}
+
+.surprise::after {
+	content: '';
+	background: url('../images/email.svg');
+	width: 140px;
+	height: 125px;
+	position: absolute;
+	right: 45px;
+	top: 52px;
+}
+
+.bonus__box {
+	position: relative;
+	max-width: 540px;
+	width: 100%;
+	color:#FFF;
+	background: $bg_green;
+	padding: 35px 45px 35px 40px;
+	&-title {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 21px;
+		margin-bottom: 25px;
+	}
+	&-info {
+		font-size: 14px;
+		line-height: 20px;
+		margin-bottom: 25px;
+	}
+}
+
+.Email {
+	display: block;
+	background: #FFFFFF;
+	border-radius: 30px;
+	border: none;
+	outline: none;
+	padding: 9px 25px;
+	&::placeholder {
+		color: #C4C4C4;
+	}
+}
+
+.bonus__box-btn {
+	display: block;
+	width: 170px;
+	height: 35px;
+	text-align: center;
+	padding-top: 6px;
+	background: $bg_green;
+	border: 2px solid #FFFFFF;
+	box-sizing: border-box;
+	border-radius: 30px;
+	transition: all .3s ease;
+	&:hover {
+		box-shadow: 0 0 12px 2px #fff;
 	}
 }
